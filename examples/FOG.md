@@ -7,8 +7,8 @@ A worked example of a ledger mid-task — after a scout pass and two interview q
 - [UK] 429 response body tone — terse or explanatory? user will know on sight → show
 
 ## Assumed
-- [A] Sliding window over fixed window — reversible at one module, no schema impact
-- [A] Limits configured in env, not DB — reversible until a customer needs per-plan limits
+- [A] Sliding window over fixed window — cost to revisit: one module, no schema impact
+- [A] Limits configured in env, not DB — cost to revisit: config loader change; revisit when a customer needs per-plan limits
 
 ## Resolved
 - [x] Redis already in the stack; reuse it, no new infra (territory, 2026-07-23) — found in docker-compose and the session store

@@ -27,7 +27,7 @@ One primitive: `FOG.md`, a per-task unknowns ledger. Every unknown gets a quadra
 - [UU?] Stripe rate limits on bulk refund unverified → scout
 
 ## Assumed
-- [A] Exponential backoff on retry — reversible at one function
+- [A] Exponential backoff on retry — cost to revisit: one function
 
 ## Resolved
 - [x] Webhook endpoint reused, not duplicated (user, 2026-07-23) — idempotency already handled there
@@ -52,7 +52,7 @@ Why quiz from the ledger matters: a quiz generated from a diff asks trivia; a qu
 ## Install
 
 ```bash
-npx skills add <your-org>/defog
+npx skills add leoncuhk/defog
 ```
 
 Or copy any `skills/<name>` folder into `.claude/skills/` (Claude Code), or anywhere your agent reads the [agentskills.io](https://agentskills.io) SKILL.md format. Each skill stands alone; `fog` is the only one others reference.
@@ -65,6 +65,10 @@ Or copy any `skills/<name>` folder into `.claude/skills/` (Claude Code), or anyw
 4. Every item resolved or assumed → `/fog-plan` writes `PLAN.md` beside the ledger. You review only the volatile decisions.
 5. Fresh session implements with `FOG.md` + `PLAN.md` as the launch packet; `fog-log` records every deviation.
 6. Before merge → `/fog-quiz`: reconcile against the diff, quiz, pass = you actually understand what shipped. Then the ledger's whys graduate to ADRs or the commit message, and the file is deleted — working memory, not documentation.
+
+## Testing
+
+Every skill was behaviorally tested, not just proofread: an agent loads the skill, executes a realistic scenario end to end (a real repo as territory for `fog-scout`, a role-played fatigued user for `fog-ask`, a hidden taste persona for `fog-show`, a git repo with a planted unlogged drive-by change for `fog-quiz`), and grades itself against the skill's own completion criteria. Text ambiguities those runs exposed — an indecisive convert-or-block rule, a Resolved/Assumed contradiction, belief labels priming the user, an undefined quiz round — were fixed before release. `scripts/validate.py` (run in CI) checks frontmatter, naming, cross-references, and the README's own claims.
 
 ## Design principles
 
