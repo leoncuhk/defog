@@ -23,4 +23,6 @@ Exits — both land the same way: convert every remaining item to `[A]`, present
 - **Budget:** hard cap of 5 blocking questions.
 - **Fatigue valve:** one "just pick"-class or one-word reply fires it, and the question that drew it counts as unanswered.
 
+If the user asks for everything at once, present the whole remaining frontier as one numbered round — recommendations attached — and treat unanswered items as silence.
+
 Write each real answer to `Resolved` with its why. A defaulted answer goes to `Assumed` as `[A]`, never to `Resolved`. Done when no open `KU` decisions remain.
