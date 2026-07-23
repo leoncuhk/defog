@@ -1,5 +1,7 @@
 # defog
 
+[![skills.sh](https://skills.sh/b/leoncuhk/defog)](https://skills.sh/leoncuhk/defog)
+
 **Seven tiny agent skills that burn down the gap between your prompt and reality — through one shared ledger.**
 
 Your prompt is a map. The codebase, the APIs, the real constraints, your own taste — that's the territory. The gap between them is **fog**, and with strong models the quality of agent work is bottlenecked by it: every patch of fog the agent guesses through, and guesses compound.
