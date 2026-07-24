@@ -10,7 +10,7 @@ The ledger can only grade what it logged — so first **reconcile ledger against
 
 Then a report, grouped by intent: what changed, how it interacts with existing code paths, and the 2–3 mental-model updates the user should walk away with.
 
-Then the quiz. A **round** is 5–8 questions drawn from the ledger — resolved decisions, deviations (especially just-discovered ones), standing assumptions — asked and graded **one question at a time**, never in bulk. Mix recall ("what happens to in-flight jobs during deploy now?") with prediction ("someone calls X with a stale token — what do they see?"). Weight toward what would bite an unaware maintainer.
+Then the quiz, scaled to the fog it guards: if reconciliation found no unlogged deviations and the ledger holds fewer than ~4 entries, one round of 2–3 questions suffices. Otherwise a **round** is 5–8 questions drawn from the ledger — resolved decisions, deviations (especially just-discovered ones), standing assumptions — asked and graded **one question at a time**, never in bulk. Mix recall ("what happens to in-flight jobs during deploy now?") with prediction ("someone calls X with a stale token — what do they see?"). Weight toward what would bite an unaware maintainer.
 
 Grade honestly. A miss is either a gap in the user's model or a change too clever — say which. Never pass out of politeness. A round passes when every question is answered correctly. After a failed round: walk the missed ledger entries with the user, then run a second round of variant questions on the missed ground — never reuse questions verbatim. Two failed rounds → recommend splitting or simplifying the change, not a third quiz.
 

@@ -54,4 +54,4 @@ One file per task: `FOG.md`, next to where the work happens (or where the user s
 
 - **Birth:** any fog-* skill that would write to a missing ledger (or section) creates it first.
 - **Handoff:** the ledger plus the persisted plan (see `fog-plan`) is the launch packet — hand both to any fresh context or subagent.
-- **Death:** after the task's acceptance gate (merge, sign-off, or delivery) passes, graduate the whys that are hard to reverse or surprising without context into ADRs, docs, or the commit message, then delete the ledger. It is working memory, not documentation.
+- **Death:** when a `fog-quiz` round passes, or the user declares the task done, graduate the whys that are hard to reverse or surprising without context into ADRs, docs, or the commit message, then delete the ledger. It is working memory, not documentation.
