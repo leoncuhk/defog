@@ -1,3 +1,5 @@
+> **Archived — superseded by [terra](https://github.com/leoncuhk/terra)**, the unified successor by the same author. The ideas live on there; this repo is kept read-only for lineage and existing installs.
+
 # defog
 
 [![skills.sh](https://skills.sh/b/leoncuhk/defog)](https://skills.sh/leoncuhk/defog)
